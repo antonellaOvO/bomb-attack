@@ -13,6 +13,11 @@ h1 {
   position: sticky;
 }
 
+h2 {
+  text-align: center;
+  margin-top: 80px;
+}
+
 .flex-container {
   display: flex;
   flex-direction: row;
@@ -33,7 +38,6 @@ h1 {
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  /* transition: all 1s linear; */
 }
 
 .translate {
@@ -43,10 +47,6 @@ h1 {
 .translate:hover {
   transform: rotateY(180deg);
 }
-
-/* .card:hover {
-  transform: rotateY(180deg); 
-} */
 
 .card:hover .two-front img {
   transform: scale(2);
@@ -84,6 +84,8 @@ h1 {
   color: white;
   transform: rotateY(180deg);
   border: 2px solid indianred;
+  background-image: url(images/explosion-img.gif);
+  background-position: center;
 }
 
 .text {
@@ -105,13 +107,20 @@ h1 {
   display: none;
 }
 
+.more a {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+}
+
 .icon-links {
   display: flex;
   justify-content: space-between;
 }
 
 .icon-links a {
-  padding: 3px;
+  padding: 7px;
 }
 
 .card:hover .more {
@@ -167,5 +176,25 @@ h1 {
 
 .three-back {
   background-image: url(images/explosion-img.gif);
+  background-position: center;
+}
+
+.four-front {
+  background-image: url(images/scream-img.gif);
+  background-position: center;
+}
+
+.five-front {
+  background-image: url(images/neutralized-bomb.webp);
+  background-position: center;
+}
+
+.five-back {
+  background-image: url(images/safe-img.gif);
+  background-position: center;
+}
+
+.six-front {
+  background-image: url(images/on-img.gif);
   background-position: center;
 }
