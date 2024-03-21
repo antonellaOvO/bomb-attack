@@ -1,15 +1,31 @@
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+h1 {
+  text-align: center;
+  background-color: indianred;
+  width: 100%;
+  height: auto;
+  color: white;
+  font-weight: bold;
+  position: sticky;
+}
+
 .flex-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 100px;
+  justify-content: center;
+  gap: 100px 60px;
+  margin: 200px 400px;
 }
 
 .container-card {
   position: relative;
   width: 250px;
   height: 320px;
-  border: 1px solid black;
 }
 
 .card {
@@ -17,11 +33,34 @@
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  transition: all 0.5s linear;
+  /* transition: all 1s linear; */
 }
 
-.card:hover {
+.translate {
+  transition: all 1s linear;
+}
+
+.translate:hover {
   transform: rotateY(180deg);
+}
+
+/* .card:hover {
+  transform: rotateY(180deg); 
+} */
+
+.card:hover .two-front img {
+  transform: scale(2);
+}
+.card:hover .two-front {
+  border: none;
+}
+
+.card:hover .two-back img {
+  transform: scale(3);
+}
+
+.card:hover .two-back {
+  border: none;
 }
 
 .front-card {
@@ -30,10 +69,9 @@
   height: 100%;
   border-radius: 20px;
   backface-visibility: hidden; /*establece si la cara posterior de un elemento es visible cuando se gira hacia el usuario: aquí le dices que en caso que se gire esta front-card y entonces sea back, esta siendo back no se vea*/
-  background-image: url(images/blow-bomb-img.gif);
   background-size: cover;
-  background-position-x: 25%;
   color: white;
+  border: 2px solid indianred;
 }
 
 .back-card {
@@ -42,9 +80,92 @@
   height: 100%;
   border-radius: 20px;
   backface-visibility: hidden; /*establece si la cara posterior de un elemento es visible cuando se gira hacia el usuario: aquí le dices que en caso que se gire esta front-card y entonces sea back, esta siendo back no se vea*/
-  background-image: url(images/WKd7.gif);
   background-size: cover;
-  background-position: center;
   color: white;
   transform: rotateY(180deg);
+  border: 2px solid indianred;
+}
+
+.text {
+  position: absolute;
+}
+
+.more {
+  position: absolute;
+  z-index: 999999999;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  width: 88%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: none;
+}
+
+.icon-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-links a {
+  padding: 3px;
+}
+
+.card:hover .more {
+  display: flex;
+}
+
+/*Styling faces (front and back) of each card*/
+
+.one-front {
+  background-image: url(images/dynamite.gif);
+  background-position: center;
+}
+
+.one-back {
+  background-image: url(images/explosion-img.gif);
+  background-position: center;
+}
+
+.two-front {
+  /* background-image: url(images/bomb-img.png);
+  background-position: center; */
+}
+
+.two-front img {
+  width: 100%;
+  height: 100%;
+  transition: scale 5s linear, rotate 2s linear 5s;
+}
+
+.two-back {
+  display: flex;
+}
+
+.two-back img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: scale 5s linear, rotate 2s linear 5s;
+}
+
+.two-back h2 {
+  position: absolute;
+  align-self: flex-end;
+  height: 13%;
+  color: white;
+  background-color: indianred;
+}
+
+.three-front {
+  background-image: url(images/blow-bomb-img.gif);
+  background-position-x: 25%;
+}
+
+.three-back {
+  background-image: url(images/explosion-img.gif);
+  background-position: center;
 }
